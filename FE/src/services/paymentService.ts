@@ -84,10 +84,7 @@ export const createMomoPayment = async (datBanId: string): Promise<PaymentRespon
       }
       
       // Nếu không có response, có thể là lỗi mạng
-      throw {
-        success: false,
-        message: apiError.message || 'Lỗi kết nối tới server'
-      };
+      throw new Error(apiError.message || 'Lỗi kết nối tới server');
     }
   } catch (error: any) {
     console.error('paymentService - Lỗi khi tạo thanh toán MoMo:', error);
@@ -186,10 +183,7 @@ export const refundMomoPayment = async (
       };
     }
     
-    throw {
-      success: false,
-      message: error.message || 'Đã xảy ra lỗi khi hoàn tiền MoMo'
-    };
+    throw new Error(error.message || 'Đã xảy ra lỗi khi hoàn tiền MoMo');
   }
 };
 
