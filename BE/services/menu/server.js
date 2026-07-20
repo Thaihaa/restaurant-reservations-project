@@ -44,11 +44,11 @@ if (config.env === 'development') {
 }
 
 // Routes
-app.use('/api/loai-mon-an', loaiMonAnRoutes);
-app.use('/api/mon-an', monAnRoutes);
+app.use('/loai-mon-an', loaiMonAnRoutes);
+app.use('/mon-an', monAnRoutes);
 
 // Kiểm tra kết nối
-app.get('/api/menu/health', (req, res) => {
+app.get('/menu/health', (req, res) => {
   res.status(200).json({
     success: true,
     service: 'Menu Service',

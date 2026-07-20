@@ -48,22 +48,22 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/roles', roleRoutes);
+app.use('/auth', authRoutes);
+app.use('/users', userRoutes);
+app.use('/roles', roleRoutes);
 
 // Health check
-app.get('/api/auth/health', (req, res) => {
+app.get('/auth/health', (req, res) => {
   res.status(200).json({ status: 'Auth service is running' });
 });
 
 // Đăng ký người dùng mới
-app.post('/api/register', async (req, res) => {
+app.post('/register', async (req, res) => {
   // ... existing code ...
 });
 
 // Đăng nhập
-app.post('/api/login', async (req, res) => {
+app.post('/login', async (req, res) => {
   // ... existing code ...
 });
 

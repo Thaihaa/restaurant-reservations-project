@@ -13877,3 +13877,523 @@ Error: Không tìm thấy - /payment
 2025-04-13 22:08:43:843 info: Restaurant Service đang chạy trên cổng 5002
 2025-04-13 22:08:47:847 info: API Gateway đang chạy trên cổng 5000
 2025-04-13 22:08:47:847 info: Môi trường: development
+2026-04-01 18:53:53:5353 info: API Gateway đang chạy trên cổng 5000
+2026-04-01 18:53:53:5353 info: Môi trường: development
+2026-04-01 18:53:54:5354 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-04-01 18:53:54:5354 info: Kết nối MongoDB thành công (Menu Service)
+2026-04-01 18:53:54:5354 info: Kết nối MongoDB thành công (Review Service)
+2026-04-01 18:53:54:5354 info: Restaurant Service đang chạy trên cổng 5002
+2026-04-01 18:53:54:5354 info: Menu Service đang chạy trên cổng 5003
+2026-04-01 18:53:54:5354 info: Review Service đang chạy trên cổng 5005
+2026-04-01 18:53:54:5354 info: Kết nối MongoDB thành công (Auth Service)
+2026-04-01 18:53:54:5354 info: Auth Service đang chạy trên cổng 5001
+2026-04-01 18:53:54:5354 info: Socket.IO đã được khởi tạo cho Order Service
+2026-04-01 18:53:54:5354 info: Kết nối MongoDB thành công (Order Service)
+2026-04-01 18:53:54:5354 info: Order Service đang chạy trên cổng 5004
+2026-04-01 18:53:54:5354 info: Socket.IO đã được kích hoạt trên Order Service
+2026-04-01 18:56:58:5658 info: POST /api/auth/login
+2026-04-01 18:56:58:5658 info: GET /api/auth/current
+2026-04-01 18:56:59:5659 info: Socket connected: DRh1vXUkE3G8Tw1HAAAC
+2026-04-01 18:56:59:5659 info: Danh sách phòng hiện tại: ["DRh1vXUkE3G8Tw1HAAAC"]
+2026-04-01 18:56:59:5659 info: Số client đang kết nối: 1
+2026-04-01 18:56:59:5659 info: Socket disconnected: DRh1vXUkE3G8Tw1HAAAC, reason: transport close
+2026-04-01 18:56:59:5659 info: Socket connected: vXnvNbhBSmRkszBYAAAE
+2026-04-01 18:56:59:5659 info: Danh sách phòng hiện tại: ["vXnvNbhBSmRkszBYAAAE"]
+2026-04-01 18:56:59:5659 info: Số client đang kết nối: 1
+2026-04-01 18:56:59:5659 info: Socket vXnvNbhBSmRkszBYAAAE joined room: user_69963f6fa1af57b0d502fbeb
+2026-04-01 18:58:21:5821 info: Bắt đầu tạo thanh toán MoMo với datBanId: 69cd085d6bc9586519bcf0fd, kiểu: string
+2026-04-01 18:58:21:5821 info: Kết quả tìm đặt bàn: Tìm thấy
+2026-04-01 18:58:21:5821 info: Tìm thấy thông tin đặt bàn: 69cd085d6bc9586519bcf0fd, Tên: Nguyễn Thái Hà, Nhà hàng: 2
+2026-04-01 18:58:21:5821 info: Tạo mã giao dịch: DATBAN_19bcf0fd_1775044701941
+2026-04-01 18:58:21:5821 info: Số tiền thanh toán: 658000
+2026-04-01 18:58:21:5821 info: Chuẩn bị gọi API MoMo với orderId=DATBAN_19bcf0fd_1775044701941, amount=658000
+2026-04-01 18:58:21:5821 info: Sử dụng MoMo PartnerCode: MOMOBKUN20180529
+2026-04-01 18:58:21:5821 info: Sử dụng MoMo AccessKey: klm...
+2026-04-01 18:58:21:5821 info: Sử dụng MoMo SecretKey: at6...
+2026-04-01 18:58:21:5821 info: Raw signature: accessKey=klm05TvNBzhg7h7j&amount=658000&extraData=eyJkYXRCYW5JZCI6IjY5Y2QwODVkNmJjOTU4NjUxOWJjZjBmZCIsImhvVGVuIjoiTmd1eeG7hW4gVGjDoWkgSMOgIiwic29EaWVuVGhvYWkiOiIwOTc0MzEyMTAwIn0=&ipnUrl=http://localhost:5000/api/payment/momo-ipn&orderId=DATBAN_19bcf0fd_1775044701941&orderInfo=Thanh toán đặt bàn tại 2&partnerCode=MOMOBKUN20180529&redirectUrl=http://localhost:5000/api/payment/callback/momo&requestId=DATBAN_19bcf0fd_1775044701941_1775044701942&requestType=captureWallet
+2026-04-01 18:58:21:5821 info: Gửi yêu cầu thanh toán MoMo: {
+  "partnerCode": "MOMOBKUN20180529",
+  "accessKey": "***",
+  "requestId": "DATBAN_19bcf0fd_1775044701941_1775044701942",
+  "amount": "658000",
+  "orderId": "DATBAN_19bcf0fd_1775044701941",
+  "orderInfo": "Thanh toán đặt bàn tại 2",
+  "redirectUrl": "http://localhost:5000/api/payment/callback/momo",
+  "ipnUrl": "http://localhost:5000/api/payment/momo-ipn",
+  "extraData": "eyJkYXRCYW5JZCI6IjY5Y2QwODVkNmJjOTU4NjUxOWJjZjBmZCIsImhvVGVuIjoiTmd1eeG7hW4gVGjDoWkgSMOgIiwic29EaWVuVGhvYWkiOiIwOTc0MzEyMTAwIn0=",
+  "requestType": "captureWallet",
+  "signature": "de908f27a85d0f17ab0d6f89cbfcdae76046d0294b89759c244925a7b39bde7d",
+  "lang": "vi"
+}
+2026-04-01 18:58:21:5821 info: Gọi MoMo API endpoint: https://test-payment.momo.vn/v2/gateway/api/create
+2026-04-01 18:58:23:5823 info: Kết quả từ MoMo: {
+  "partnerCode": "MOMOBKUN20180529",
+  "orderId": "DATBAN_19bcf0fd_1775044701941",
+  "requestId": "DATBAN_19bcf0fd_1775044701941_1775044701942",
+  "amount": 658000,
+  "responseTime": 1775044705551,
+  "message": "Thành công.",
+  "resultCode": 0,
+  "payUrl": "https://test-payment.momo.vn/v2/gateway/pay?t=TU9NT0JLVU4yMDE4MDUyOXxEQVRCQU5fMTliY2YwZmRfMTc3NTA0NDcwMTk0MQ&s=860150991c9a8e6365e51d57f008eb81dca8686233407a4ced1f4ef4f4c86ec9",
+  "deeplink": "momo://app?action=payWithApp&isScanQR=false&serviceType=app&sid=TU9NT0JLVU4yMDE4MDUyOXxEQVRCQU5fMTliY2YwZmRfMTc3NTA0NDcwMTk0MQ&v=3.0",
+  "qrCodeUrl": "00020101021226110007vn.momo38620010A00000072701320006970454011899MM26091O000001670208QRIBFTTA530370454066580005802VN62520515MMT7MvjiYOVbUQR070100824Thanh toan dat ban tai 263044e77",
+  "applink": "https://test-applinks.momo.vn/payment/v2?action=payWithApp&isScanQR=false&serviceType=app&sid=TU9NT0JLVU4yMDE4MDUyOXxEQVRCQU5fMTliY2YwZmRfMTc3NTA0NDcwMTk0MQ&v=3.0&deeplinkCallback=http%3A%2F%2Flocalhost%3A5000%2Fapi%2Fpayment%2Fcallback%2Fmomo&callBackUrl=http%3A%2F%2Flocalhost%3A5000%2Fapi%2Fpayment%2Fcallback%2Fmomo",
+  "deeplinkMiniApp": "momo://app?action=payWithApp&isScanQR=false&serviceType=miniapp&sid=TU9NT0JLVU4yMDE4MDUyOXxEQVRCQU5fMTliY2YwZmRfMTc3NTA0NDcwMTk0MQ&v=3.0",
+  "signature": "0e0a9a3964227fcde91ad200381e2982658047d719c5f9a6bfdc1fd0609e5073"
+}
+2026-04-01 18:58:23:5823 info: Tạo thanh toán MoMo thành công, payUrl: https://test-payment.momo.vn/v2/gateway/pay?t=TU9NT0JLVU4yMDE4MDUyOXxEQVRCQU5fMTliY2YwZmRfMTc3NTA0NDcwMTk0MQ&s=860150991c9a8e6365e51d57f008eb81dca8686233407a4ced1f4ef4f4c86ec9
+2026-04-01 18:58:23:5823 info: Trạng thái thanh toán 69cd085f6bc9586519bcf101 được cập nhật thành: pending
+2026-04-01 18:58:23:5823 info: Đã lưu thông tin thanh toán với ID: 69cd085f6bc9586519bcf101
+2026-04-01 18:58:23:5823 info: Đã cập nhật trạng thái đặt bàn thành "Đang xử lý"
+2026-04-01 18:58:24:5824 error: Không tìm thấy - /payment
+Error: Không tìm thấy - /payment
+    at notFound (F:\Project_NodeJs\restaurant-reservations-project\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\Project_NodeJs\restaurant-reservations-project\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\route.js:149:13)
+2026-04-01 19:07:30:730 info: Kết nối MongoDB thành công (Review Service)
+2026-04-01 19:07:30:730 info: Review Service đang chạy trên cổng 5005
+2026-04-01 19:07:35:735 info: Socket.IO đã được khởi tạo cho Order Service
+2026-04-01 19:07:35:735 info: Kết nối MongoDB thành công (Order Service)
+2026-04-01 19:07:35:735 info: Order Service đang chạy trên cổng 5004
+2026-04-01 19:07:35:735 info: Socket.IO đã được kích hoạt trên Order Service
+2026-04-01 19:07:35:735 info: Socket connected: aY_iaKHf8jnr2BVtAAAB
+2026-04-01 19:07:35:735 info: Danh sách phòng hiện tại: ["aY_iaKHf8jnr2BVtAAAB"]
+2026-04-01 19:07:35:735 info: Số client đang kết nối: 1
+2026-04-01 19:07:40:740 info: Kết nối MongoDB thành công (Menu Service)
+2026-04-01 19:07:40:740 info: Menu Service đang chạy trên cổng 5003
+2026-04-01 19:07:45:745 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-04-01 19:07:45:745 info: Restaurant Service đang chạy trên cổng 5002
+2026-04-01 19:07:50:750 info: Kết nối MongoDB thành công (Auth Service)
+2026-04-01 19:07:50:750 info: Auth Service đang chạy trên cổng 5001
+2026-04-01 19:07:55:755 info: API Gateway đang chạy trên cổng 5000
+2026-04-01 19:07:55:755 info: Môi trường: development
+2026-07-16 01:06:06:66 info: API Gateway đang chạy trên cổng 5000
+2026-07-16 01:06:06:66 info: Môi trường: development
+2026-07-16 01:06:08:68 info: Kết nối MongoDB thành công (Property Service)
+2026-07-16 01:06:08:68 info: Property Service đang chạy trên cổng 5006
+2026-07-16 01:06:08:68 info: Kết nối MongoDB thành công (Review Service)
+2026-07-16 01:06:08:68 info: Kết nối MongoDB thành công (Menu Service)
+2026-07-16 01:06:08:68 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-07-16 01:06:08:68 info: Restaurant Service đang chạy trên cổng 5002
+2026-07-16 01:06:08:68 info: Review Service đang chạy trên cổng 5005
+2026-07-16 01:06:08:68 info: Menu Service đang chạy trên cổng 5003
+2026-07-16 01:06:08:68 info: Kết nối MongoDB thành công (Auth Service)
+2026-07-16 01:06:08:68 info: Auth Service đang chạy trên cổng 5001
+2026-07-16 01:06:08:68 info: Socket.IO đã được khởi tạo cho Order Service
+2026-07-16 01:06:08:68 info: Kết nối MongoDB thành công (Order Service)
+2026-07-16 01:06:08:68 info: Order Service đang chạy trên cổng 5004
+2026-07-16 01:06:08:68 info: Socket.IO đã được kích hoạt trên Order Service
+2026-07-17 22:25:37:2537 info: API Gateway đang chạy trên cổng 5000
+2026-07-17 22:25:37:2537 info: Môi trường: development
+2026-07-17 22:25:38:2538 info: Kết nối MongoDB thành công (Property Service)
+2026-07-17 22:25:38:2538 info: Property Service đang chạy trên cổng 5006
+2026-07-17 22:25:39:2539 info: Kết nối MongoDB thành công (Review Service)
+2026-07-17 22:25:39:2539 info: Kết nối MongoDB thành công (Menu Service)
+2026-07-17 22:25:39:2539 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-07-17 22:25:39:2539 info: Review Service đang chạy trên cổng 5005
+2026-07-17 22:25:39:2539 info: Restaurant Service đang chạy trên cổng 5002
+2026-07-17 22:25:39:2539 info: Menu Service đang chạy trên cổng 5003
+2026-07-17 22:25:39:2539 info: Kết nối MongoDB thành công (Auth Service)
+2026-07-17 22:25:39:2539 info: Auth Service đang chạy trên cổng 5001
+2026-07-17 22:25:39:2539 info: Socket.IO đã được khởi tạo cho Order Service
+2026-07-17 22:25:39:2539 info: Kết nối MongoDB thành công (Order Service)
+2026-07-17 22:25:39:2539 info: Order Service đang chạy trên cổng 5004
+2026-07-17 22:25:39:2539 info: Socket.IO đã được kích hoạt trên Order Service
+2026-07-17 22:26:02:262 info: POST /api/auth/login
+2026-07-17 22:26:02:262 info: GET /api/auth/current
+2026-07-17 22:26:02:262 info: Socket connected: _z2Ar-ZnKnaGVf3zAAAB
+2026-07-17 22:26:02:262 info: Danh sách phòng hiện tại: ["_z2Ar-ZnKnaGVf3zAAAB"]
+2026-07-17 22:26:02:262 info: Số client đang kết nối: 1
+2026-07-17 22:26:02:262 info: Socket disconnected: _z2Ar-ZnKnaGVf3zAAAB, reason: client namespace disconnect
+2026-07-17 22:26:02:262 info: Socket connected: 1D_TYy3cz2WnvsC7AAAD
+2026-07-17 22:26:02:262 info: Danh sách phòng hiện tại: ["1D_TYy3cz2WnvsC7AAAD"]
+2026-07-17 22:26:02:262 info: Số client đang kết nối: 1
+2026-07-17 22:26:02:262 info: Socket 1D_TYy3cz2WnvsC7AAAD joined room: user_69963f6fa1af57b0d502fbeb
+2026-07-17 22:26:09:269 info: Socket disconnected: 1D_TYy3cz2WnvsC7AAAD, reason: transport close
+2026-07-17 22:26:09:269 info: Socket connected: TwoE9U3_l-z8E9plAAAG
+2026-07-17 22:26:09:269 info: Danh sách phòng hiện tại: ["TwoE9U3_l-z8E9plAAAG"]
+2026-07-17 22:26:09:269 info: Số client đang kết nối: 1
+2026-07-17 22:26:09:269 info: GET /api/auth/current
+2026-07-17 22:26:09:269 info: GET /api/auth/current
+2026-07-17 22:26:09:269 info: GET /api/auth/current
+2026-07-17 22:26:09:269 info: GET /api/auth/current
+2026-07-17 22:26:09:269 info: GET /api/auth/current
+2026-07-17 22:26:09:269 info: Socket disconnected: TwoE9U3_l-z8E9plAAAG, reason: client namespace disconnect
+2026-07-17 22:26:09:269 info: Socket connected: CjKsCygH0BOR2OVnAAAI
+2026-07-17 22:26:09:269 info: Danh sách phòng hiện tại: ["CjKsCygH0BOR2OVnAAAI"]
+2026-07-17 22:26:09:269 info: Số client đang kết nối: 1
+2026-07-17 22:26:09:269 info: Socket CjKsCygH0BOR2OVnAAAI joined room: user_69963f6fa1af57b0d502fbeb
+2026-07-17 22:27:22:2722 info: Socket disconnected: CjKsCygH0BOR2OVnAAAI, reason: transport close
+2026-07-17 22:27:22:2722 info: GET /api/auth/current
+2026-07-17 22:27:22:2722 info: GET /api/auth/current
+2026-07-17 22:27:22:2722 info: Socket connected: IET5mCwT77ncynqQAAAM
+2026-07-17 22:27:22:2722 info: Danh sách phòng hiện tại: ["IET5mCwT77ncynqQAAAM"]
+2026-07-17 22:27:22:2722 info: Số client đang kết nối: 1
+2026-07-17 22:27:22:2722 info: Socket IET5mCwT77ncynqQAAAM joined room: user_69963f6fa1af57b0d502fbeb
+2026-07-19 03:11:12:1112 info: API Gateway đang chạy trên cổng 5000
+2026-07-19 03:11:12:1112 info: Môi trường: development
+2026-07-19 03:11:14:1114 info: Kết nối MongoDB thành công (Property Service)
+2026-07-19 03:11:14:1114 info: Property Service đang chạy trên cổng 5006
+2026-07-19 03:11:14:1114 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-07-19 03:11:14:1114 info: Kết nối MongoDB thành công (Review Service)
+2026-07-19 03:11:14:1114 info: Restaurant Service đang chạy trên cổng 5002
+2026-07-19 03:11:14:1114 info: Kết nối MongoDB thành công (Menu Service)
+2026-07-19 03:11:14:1114 info: Kết nối MongoDB thành công (Auth Service)
+2026-07-19 03:11:14:1114 info: Review Service đang chạy trên cổng 5005
+2026-07-19 03:11:14:1114 info: Menu Service đang chạy trên cổng 5003
+2026-07-19 03:11:14:1114 info: Auth Service đang chạy trên cổng 5001
+2026-07-19 03:11:14:1114 info: Socket.IO đã được khởi tạo cho Order Service
+2026-07-19 03:11:14:1114 info: Kết nối MongoDB thành công (Order Service)
+2026-07-19 03:11:14:1114 info: Order Service đang chạy trên cổng 5004
+2026-07-19 03:11:14:1114 info: Socket.IO đã được kích hoạt trên Order Service
+2026-07-19 03:13:49:1349 info: POST /auth/login
+2026-07-19 03:13:54:1354 info: POST /auth/login
+2026-07-19 03:13:56:1356 info: POST /auth/login
+2026-07-19 03:13:56:1356 info: POST /auth/login
+2026-07-19 03:13:56:1356 info: POST /auth/login
+2026-07-19 03:13:57:1357 info: POST /auth/login
+2026-07-19 03:13:57:1357 info: POST /auth/login
+2026-07-19 03:13:57:1357 info: POST /auth/login
+2026-07-19 03:13:57:1357 info: POST /auth/login
+2026-07-19 03:13:58:1358 info: POST /auth/login
+2026-07-19 03:14:07:147 info: POST /auth/login
+2026-07-19 03:14:23:1423 info: POST /auth/login
+2026-07-19 03:14:27:1427 info: POST /auth/login
+2026-07-19 03:14:28:1428 info: POST /auth/login
+2026-07-19 03:14:28:1428 info: POST /auth/login
+2026-07-19 03:14:28:1428 info: POST /auth/login
+2026-07-19 03:14:29:1429 info: POST /auth/login
+2026-07-19 03:14:29:1429 info: POST /auth/login
+2026-07-19 03:14:29:1429 info: POST /auth/login
+2026-07-19 03:14:29:1429 info: POST /auth/login
+2026-07-19 03:14:31:1431 info: POST /auth/login
+2026-07-19 03:14:39:1439 info: POST /auth/login
+2026-07-19 03:14:44:1444 info: POST /auth/login
+2026-07-19 03:14:46:1446 info: POST /auth/login
+2026-07-19 03:14:47:1447 info: POST /auth/login
+2026-07-19 03:14:47:1447 info: POST /auth/login
+2026-07-19 03:14:47:1447 info: POST /auth/login
+2026-07-19 03:14:47:1447 info: POST /auth/login
+2026-07-19 03:15:08:158 info: POST /auth/login
+2026-07-19 03:15:10:1510 info: POST /auth/login
+2026-07-19 03:15:11:1511 info: POST /auth/login
+2026-07-19 03:15:13:1513 info: POST /auth/login
+2026-07-19 03:15:20:1520 info: POST /auth/login
+2026-07-19 03:20:51:2051 info: Kết nối MongoDB thành công (Review Service)
+2026-07-19 03:20:51:2051 info: Review Service đang chạy trên cổng 5005
+2026-07-19 03:20:57:2057 info: Socket.IO đã được khởi tạo cho Order Service
+2026-07-19 03:20:57:2057 info: Kết nối MongoDB thành công (Order Service)
+2026-07-19 03:20:57:2057 info: Order Service đang chạy trên cổng 5004
+2026-07-19 03:20:57:2057 info: Socket.IO đã được kích hoạt trên Order Service
+2026-07-19 03:21:01:211 info: Kết nối MongoDB thành công (Property Service)
+2026-07-19 03:21:01:211 info: Property Service đang chạy trên cổng 5006
+2026-07-19 03:21:06:216 info: Kết nối MongoDB thành công (Menu Service)
+2026-07-19 03:21:06:216 info: Menu Service đang chạy trên cổng 5003
+2026-07-19 03:21:11:2111 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-07-19 03:21:11:2111 info: Restaurant Service đang chạy trên cổng 5002
+2026-07-19 03:21:16:2116 info: Kết nối MongoDB thành công (Auth Service)
+2026-07-19 03:21:16:2116 info: Auth Service đang chạy trên cổng 5001
+2026-07-19 03:21:21:2121 info: API Gateway đang chạy trên cổng 5000
+2026-07-19 03:21:21:2121 info: Môi trường: development
+2026-07-19 03:21:45:2145 info: API Gateway đang chạy trên cổng 5000
+2026-07-19 03:21:45:2145 info: Môi trường: development
+2026-07-19 03:21:47:2147 info: Kết nối MongoDB thành công (Property Service)
+2026-07-19 03:21:47:2147 info: Property Service đang chạy trên cổng 5006
+2026-07-19 03:21:47:2147 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-07-19 03:21:47:2147 info: Restaurant Service đang chạy trên cổng 5002
+2026-07-19 03:21:47:2147 info: Kết nối MongoDB thành công (Menu Service)
+2026-07-19 03:21:47:2147 info: Menu Service đang chạy trên cổng 5003
+2026-07-19 03:21:47:2147 info: Kết nối MongoDB thành công (Auth Service)
+2026-07-19 03:21:47:2147 info: Kết nối MongoDB thành công (Review Service)
+2026-07-19 03:21:47:2147 info: Review Service đang chạy trên cổng 5005
+2026-07-19 03:21:47:2147 info: Auth Service đang chạy trên cổng 5001
+2026-07-19 03:21:47:2147 info: Socket.IO đã được khởi tạo cho Order Service
+2026-07-19 03:21:47:2147 info: Kết nối MongoDB thành công (Order Service)
+2026-07-19 03:21:47:2147 info: Order Service đang chạy trên cổng 5004
+2026-07-19 03:21:47:2147 info: Socket.IO đã được kích hoạt trên Order Service
+2026-07-19 03:21:50:2150 info: POST /auth/login
+2026-07-19 03:22:30:2230 info: POST /auth/login
+2026-07-19 03:22:30:2230 info: GET /auth/current
+2026-07-19 03:22:30:2230 info: Socket connected: 7-R4DKBjCZ6kQmfPAAAB
+2026-07-19 03:22:30:2230 info: Danh sách phòng hiện tại: ["7-R4DKBjCZ6kQmfPAAAB"]
+2026-07-19 03:22:30:2230 info: Số client đang kết nối: 1
+2026-07-19 03:22:30:2230 info: Socket disconnected: 7-R4DKBjCZ6kQmfPAAAB, reason: client namespace disconnect
+2026-07-19 03:22:30:2230 info: Socket connected: pxEQ5lLMy5H8lQdbAAAD
+2026-07-19 03:22:30:2230 info: Danh sách phòng hiện tại: ["pxEQ5lLMy5H8lQdbAAAD"]
+2026-07-19 03:22:30:2230 info: Số client đang kết nối: 1
+2026-07-19 03:22:30:2230 info: Socket pxEQ5lLMy5H8lQdbAAAD joined room: admin_room
+2026-07-19 03:22:30:2230 info: Socket pxEQ5lLMy5H8lQdbAAAD joined room: user_6a5bdde2dde4094aa8dbbe61
+2026-07-19 03:22:38:2238 info: Socket disconnected: pxEQ5lLMy5H8lQdbAAAD, reason: transport close
+2026-07-19 03:22:38:2238 info: GET /auth/current
+2026-07-19 03:22:38:2238 info: GET /auth/current
+2026-07-19 03:22:38:2238 info: GET /users/count
+2026-07-19 03:22:38:2238 info: Socket connected: kTpUchNa0zAezqy4AAAG
+2026-07-19 03:22:38:2238 info: Danh sách phòng hiện tại: ["kTpUchNa0zAezqy4AAAG"]
+2026-07-19 03:22:38:2238 info: Số client đang kết nối: 1
+2026-07-19 03:22:38:2238 info: Socket kTpUchNa0zAezqy4AAAG joined room: admin_room
+2026-07-19 03:22:38:2238 info: Socket kTpUchNa0zAezqy4AAAG joined room: user_6a5bdde2dde4094aa8dbbe61
+2026-07-19 03:22:38:2238 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 03:22:38:2238 info: GET /users/count
+2026-07-19 03:22:38:2238 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 03:22:42:2242 info: GET /users
+2026-07-19 03:22:42:2242 info: GET /users
+2026-07-19 03:22:53:2253 info: Socket kTpUchNa0zAezqy4AAAG joined room: admin_room
+2026-07-19 03:22:53:2253 info: Socket kTpUchNa0zAezqy4AAAG joined room: admin_room
+2026-07-19 03:22:53:2253 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 03:22:53:2253 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 03:22:53:2253 info: GET /users/count
+2026-07-19 03:22:53:2253 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 03:22:53:2253 info: GET /users/count
+2026-07-19 03:22:53:2253 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 03:22:55:2255 info: Socket disconnected: kTpUchNa0zAezqy4AAAG, reason: transport close
+2026-07-19 04:42:49:4249 info: Kết nối MongoDB thành công (Review Service)
+2026-07-19 04:42:49:4249 info: Review Service đang chạy trên cổng 5005
+2026-07-19 04:42:54:4254 info: Kết nối MongoDB thành công (Property Service)
+2026-07-19 04:42:54:4254 info: Property Service đang chạy trên cổng 5006
+2026-07-19 04:42:59:4259 info: Kết nối MongoDB thành công (Menu Service)
+2026-07-19 04:42:59:4259 info: Menu Service đang chạy trên cổng 5003
+2026-07-19 04:43:04:434 info: Socket.IO đã được khởi tạo cho Order Service
+2026-07-19 04:43:04:434 info: Kết nối MongoDB thành công (Order Service)
+2026-07-19 04:43:04:434 info: Order Service đang chạy trên cổng 5004
+2026-07-19 04:43:04:434 info: Socket.IO đã được kích hoạt trên Order Service
+2026-07-19 04:43:09:439 info: Kết nối MongoDB thành công (Auth Service)
+2026-07-19 04:43:09:439 info: Auth Service đang chạy trên cổng 5001
+2026-07-19 04:43:14:4314 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-07-19 04:43:14:4314 info: Restaurant Service đang chạy trên cổng 5002
+2026-07-19 04:43:18:4318 info: API Gateway đang chạy trên cổng 5000
+2026-07-19 04:43:18:4318 info: Môi trường: development
+2026-07-19 04:50:50:5050 info: API Gateway đang chạy trên cổng 5000
+2026-07-19 04:50:50:5050 info: Môi trường: development
+2026-07-19 04:50:52:5052 info: Kết nối MongoDB thành công (Property Service)
+2026-07-19 04:50:52:5052 info: Property Service đang chạy trên cổng 5006
+2026-07-19 04:50:53:5053 info: Kết nối MongoDB thành công (Restaurant Service)
+2026-07-19 04:50:53:5053 info: Restaurant Service đang chạy trên cổng 5002
+2026-07-19 04:50:53:5053 info: Kết nối MongoDB thành công (Menu Service)
+2026-07-19 04:50:53:5053 info: Menu Service đang chạy trên cổng 5003
+2026-07-19 04:50:53:5053 info: Kết nối MongoDB thành công (Review Service)
+2026-07-19 04:50:53:5053 info: Kết nối MongoDB thành công (Auth Service)
+2026-07-19 04:50:53:5053 info: Review Service đang chạy trên cổng 5005
+2026-07-19 04:50:53:5053 info: Auth Service đang chạy trên cổng 5001
+2026-07-19 04:50:53:5053 info: Socket.IO đã được khởi tạo cho Order Service
+2026-07-19 04:50:53:5053 info: Kết nối MongoDB thành công (Order Service)
+2026-07-19 04:50:53:5053 info: Order Service đang chạy trên cổng 5004
+2026-07-19 04:50:53:5053 info: Socket.IO đã được kích hoạt trên Order Service
+2026-07-19 04:51:14:5114 info: POST /auth/login
+2026-07-19 04:51:21:5121 info: POST /auth/login
+2026-07-19 04:51:21:5121 info: GET /auth/current
+2026-07-19 04:51:21:5121 info: Socket connected: 5ANVDTYA9O6e-JyxAAAB
+2026-07-19 04:51:21:5121 info: Danh sách phòng hiện tại: ["5ANVDTYA9O6e-JyxAAAB"]
+2026-07-19 04:51:21:5121 info: Số client đang kết nối: 1
+2026-07-19 04:51:21:5121 info: Socket disconnected: 5ANVDTYA9O6e-JyxAAAB, reason: client namespace disconnect
+2026-07-19 04:51:21:5121 info: Socket connected: l27MJclT8fO7iIGIAAAD
+2026-07-19 04:51:21:5121 info: Danh sách phòng hiện tại: ["l27MJclT8fO7iIGIAAAD"]
+2026-07-19 04:51:21:5121 info: Số client đang kết nối: 1
+2026-07-19 04:51:21:5121 info: Socket l27MJclT8fO7iIGIAAAD joined room: admin_room
+2026-07-19 04:51:21:5121 info: Socket l27MJclT8fO7iIGIAAAD joined room: user_6a5bdde2dde4094aa8dbbe61
+2026-07-19 04:51:24:5124 info: Socket disconnected: l27MJclT8fO7iIGIAAAD, reason: transport close
+2026-07-19 04:51:25:5125 info: GET /auth/current
+2026-07-19 04:51:25:5125 info: GET /users/count
+2026-07-19 04:51:25:5125 info: Socket connected: bs_EQyrES8TIVBOcAAAM
+2026-07-19 04:51:25:5125 info: Danh sách phòng hiện tại: ["bs_EQyrES8TIVBOcAAAM"]
+2026-07-19 04:51:25:5125 info: Số client đang kết nối: 1
+2026-07-19 04:51:25:5125 info: GET /auth/current
+2026-07-19 04:51:25:5125 info: Socket disconnected: bs_EQyrES8TIVBOcAAAM, reason: client namespace disconnect
+2026-07-19 04:51:25:5125 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 04:51:25:5125 info: GET /users/count
+2026-07-19 04:51:25:5125 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 04:51:25:5125 info: Socket connected: grAodpebaGj39bzFAAAP
+2026-07-19 04:51:25:5125 info: Danh sách phòng hiện tại: ["grAodpebaGj39bzFAAAP"]
+2026-07-19 04:51:25:5125 info: Số client đang kết nối: 1
+2026-07-19 04:51:25:5125 info: Socket grAodpebaGj39bzFAAAP joined room: admin_room
+2026-07-19 04:51:25:5125 info: Socket grAodpebaGj39bzFAAAP joined room: user_6a5bdde2dde4094aa8dbbe61
+2026-07-19 04:51:30:5130 info: GET /users
+2026-07-19 04:51:30:5130 info: GET /users
+2026-07-19 04:51:34:5134 info: Socket grAodpebaGj39bzFAAAP joined room: admin_room
+2026-07-19 04:51:34:5134 info: Socket grAodpebaGj39bzFAAAP joined room: admin_room
+2026-07-19 04:51:34:5134 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:51:34:5134 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:51:35:5135 info: Socket grAodpebaGj39bzFAAAP joined room: admin_room
+2026-07-19 04:51:35:5135 info: Socket grAodpebaGj39bzFAAAP joined room: admin_room
+2026-07-19 04:51:35:5135 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:51:35:5135 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:51:36:5136 info: GET /users
+2026-07-19 04:51:36:5136 info: GET /users
+2026-07-19 04:52:02:522 info: GET /users
+2026-07-19 04:52:02:522 info: GET /users
+2026-07-19 04:52:03:523 info: GET /users
+2026-07-19 04:52:04:524 info: GET /users
+2026-07-19 04:52:04:524 info: GET /users
+2026-07-19 04:52:04:524 info: GET /users
+2026-07-19 04:52:09:529 info: Socket grAodpebaGj39bzFAAAP joined room: admin_room
+2026-07-19 04:52:09:529 info: Socket grAodpebaGj39bzFAAAP joined room: admin_room
+2026-07-19 04:52:09:529 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:52:09:529 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:52:15:5215 info: Socket disconnected: grAodpebaGj39bzFAAAP, reason: transport close
+2026-07-19 04:52:15:5215 info: GET /auth/current
+2026-07-19 04:52:15:5215 info: GET /auth/current
+2026-07-19 04:52:15:5215 info: Socket connected: JuE5DrTfem4OwHEpAAAU
+2026-07-19 04:52:15:5215 info: Danh sách phòng hiện tại: ["JuE5DrTfem4OwHEpAAAU"]
+2026-07-19 04:52:15:5215 info: Số client đang kết nối: 1
+2026-07-19 04:52:15:5215 info: Socket JuE5DrTfem4OwHEpAAAU joined room: admin_room
+2026-07-19 04:52:15:5215 info: Socket JuE5DrTfem4OwHEpAAAU joined room: user_6a5bdde2dde4094aa8dbbe61

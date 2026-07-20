@@ -30,10 +30,10 @@ if (config.env === 'development') {
 }
 
 // Routes
-app.use('/api/danh-gia', danhGiaRoutes);
+app.use('/danh-gia', danhGiaRoutes);
 
 // Kiểm tra kết nối
-app.get('/api/review/health', (req, res) => {
+app.get('/review/health', (req, res) => {
   res.status(200).json({
     success: true,
     service: 'Review Service',

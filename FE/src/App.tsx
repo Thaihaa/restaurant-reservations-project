@@ -21,6 +21,9 @@ import ReservationsPage from './pages/admin/ReservationsPage';
 import AdminMenuPage from './pages/admin/MenuPage';
 import ReservationDetailPage from './pages/ReservationDetailPage';
 import PaymentCallbackPage from './pages/PaymentCallbackPage';
+import PostManagementPage from './pages/PostManagementPage';
+import CategoryPage from './pages/CategoryPage';
+import PropertyDetailPage from './pages/PropertyDetailPage';
 
 
 // Tạo theme
@@ -293,6 +296,9 @@ function App() {
                   <Footer />
                 </>
               } />
+              <Route path="/dang-tin" element={<><Header /><PostManagementPage /><Footer /></>} />
+              <Route path="/quan-ly-tin-dang" element={<><Header /><PostManagementPage /><Footer /></>} />
+              <Route path="/bat-dong-san/:id" element={<><Header /><PropertyDetailPage /><Footer /></>} />
                <Route path="/reservation-detail" element={
                 <>
                   <Header />
@@ -321,6 +327,7 @@ function App() {
                   <Footer />
                 </>
               } />
+              <Route path="/:section/*" element={<><Header /><CategoryPage /><Footer /></>} />
             </Routes>
           </Router>
         </CartProvider>

@@ -11,14 +11,16 @@ module.exports = {
     restaurant: process.env.RESTAURANT_SERVICE_PORT || 5002,
     menu: process.env.MENU_SERVICE_PORT || 5003,
     order: process.env.ORDER_SERVICE_PORT || 5004,
-    review: process.env.REVIEW_SERVICE_PORT || 5005
+    review: process.env.REVIEW_SERVICE_PORT || 5005,
+    property: process.env.PROPERTY_SERVICE_PORT || 5006
   },
   serviceUrls: {
     auth: process.env.AUTH_SERVICE_URL || 'http://localhost:5001',
     restaurant: process.env.RESTAURANT_SERVICE_URL || 'http://localhost:5002',
     menu: process.env.MENU_SERVICE_URL || 'http://localhost:5003',
     order: process.env.ORDER_SERVICE_URL || 'http://localhost:5004',
-    review: process.env.REVIEW_SERVICE_URL || 'http://localhost:5005'
+    review: process.env.REVIEW_SERVICE_URL || 'http://localhost:5005',
+    property: process.env.PROPERTY_SERVICE_URL || 'http://localhost:5006'
   },
   mongodb: {
     uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/restaurant'

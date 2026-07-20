@@ -1,35 +1,65 @@
 const mongoose = require('mongoose');
 
-const banSchema = new mongoose.Schema(
+const chiNhanhSchema = new mongoose.Schema(
   {
-    maBan: {
+    maChiNhanh: {
       type: String,
-      required: [true, 'Mã bàn là bắt buộc'],
+      required: [true, 'Mã chi nhánh là bắt buộc'],
       trim: true
     },
-    nhaHang: {
+    moiGioi: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'NhaHang',
-      required: [true, 'Nhà hàng là bắt buộc']
+      ref: 'MoiGioi',
+      required: [true, 'Môi giới là bắt buộc']
     },
-    viTri: {
+    tenChiNhanh: {
       type: String,
-      required: [true, 'Vị trí bàn là bắt buộc'],
+      required: [true, 'Tên chi nhánh là bắt buộc'],
       trim: true
     },
-    soLuongKhachToiDa: {
+    diaChi: {
+      type: String,
+      required: [true, 'Địa chỉ chi nhánh là bắt buộc'],
+      trim: true
+    },
+    dienThoai: {
+      type: String,
+      required: [true, 'Số điện thoại là bắt buộc'],
+      trim: true
+    },
+    email: {
+      type: String,
+      trim: true,
+      lowercase: true
+    },
+    soNhanVien: {
       type: Number,
-      required: [true, 'Số lượng khách tối đa là bắt buộc'],
-      min: 1
+      default: 0,
+      min: 0
     },
     trangThai: {
       type: String,
-      enum: ['Có sẵn', 'Đang sử dụng', 'Bảo trì'],
-      default: 'Có sẵn'
+      enum: ['Hoạt động', 'Tạm dừng', 'Bảo trì'],
+      default: 'Hoạt động'
     },
     moTa: {
       type: String,
       trim: true
+    },
+    hinhAnh: {
+      type: [String],
+      default: []
+    },
+    viTri: {
+      type: {
+        type: String,
+        enum: ['Point'],
+        default: 'Point'
+      },
+      coordinates: {
+        type: [Number],
+        default: [0, 0] // [longitude, latitude]
+      }
     }
   },
   {
@@ -38,8 +68,9 @@ const banSchema = new mongoose.Schema(
 );
 
 // Tạo chỉ mục cho việc tìm kiếm
-banSchema.index({ nhaHang: 1, maBan: 1 }, { unique: true });
+chiNhanhSchema.index({ moiGioi: 1, maChiNhanh: 1 }, { unique: true });
+chiNhanhSchema.index({ viTri: '2dsphere' });
 
-const Ban = mongoose.model('Ban', banSchema);
+const ChiNhanh = mongoose.model('ChiNhanh', chiNhanhSchema);
 
-module.exports = Ban; 
+module.exports = ChiNhanh; 

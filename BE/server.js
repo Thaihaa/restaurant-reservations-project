@@ -69,7 +69,7 @@ if (config.env === 'development') {
 app.use('/api/auth', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.auth}`,
   changeOrigin: true,
-  pathRewrite: { '^/api/auth': '/api/auth' },
+  pathRewrite: { '^/api/auth': '/auth' },
   timeout: 60000,
   proxyTimeout: 60000,
   onError: (err, req, res) => {
@@ -100,6 +100,7 @@ app.use('/api/auth', createProxyMiddleware({
 app.use('/api/users', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.auth}`,
   changeOrigin: true,
+  pathRewrite: { '^/api/users': '/users' },
   timeout: 60000,
   proxyTimeout: 60000,
   ws: false,
@@ -154,6 +155,7 @@ app.use('/api/users', createProxyMiddleware({
 app.use('/api/roles', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.auth}`,
   changeOrigin: true,
+  pathRewrite: { '^/api/roles': '/roles' },
   timeout: 30000,
   proxyTimeout: 30000,
   ws: false,
@@ -180,10 +182,11 @@ app.use('/api/roles', createProxyMiddleware({
   }
 }));
 
-// Restaurant Service
-app.use('/api/nha-hang', createProxyMiddleware({
+// Real Estate Agent Service (formerly Restaurant Service)
+app.use('/api/moi-gioi', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.restaurant}`,
   changeOrigin: true,
+  pathRewrite: { '^/api/moi-gioi': '/moi-gioi' },
   onProxyReq: (proxyReq, req, res) => {
     // Chuyển tiếp token xác thực
     if (req.headers.authorization) {
@@ -192,10 +195,11 @@ app.use('/api/nha-hang', createProxyMiddleware({
   }
 }));
 
-// Bàn Service
-app.use('/api/ban', createProxyMiddleware({
+// Real Estate Agent Branches
+app.use('/api/chi-nhanh', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.restaurant}`,
   changeOrigin: true,
+  pathRewrite: { '^/api/chi-nhanh': '/chi-nhanh' },
   onProxyReq: (proxyReq, req, res) => {
     // Chuyển tiếp token xác thực
     if (req.headers.authorization) {
@@ -208,6 +212,7 @@ app.use('/api/ban', createProxyMiddleware({
 app.use('/api/loai-mon-an', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.menu}`,
   changeOrigin: true,
+  pathRewrite: { '^/api/loai-mon-an': '/loai-mon-an' },
   onProxyReq: (proxyReq, req, res) => {
     // Chuyển tiếp token xác thực
     if (req.headers.authorization) {
@@ -219,6 +224,7 @@ app.use('/api/loai-mon-an', createProxyMiddleware({
 app.use('/api/mon-an', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.menu}`,
   changeOrigin: true,
+  pathRewrite: { '^/api/mon-an': '/mon-an' },
   timeout: 120000,
   proxyTimeout: 120000,
   onProxyReq: (proxyReq, req, res) => {
@@ -247,11 +253,54 @@ app.use('/api/mon-an', createProxyMiddleware({
   }
 }));
 
+// Property Service
+app.use('/api/tin-dang', createProxyMiddleware({
+  target: `http://localhost:${config.servicePorts.property}`,
+  changeOrigin: true,
+  pathRewrite: { '^/api/tin-dang': '/tin-dang' },
+  timeout: 120000,
+  proxyTimeout: 120000,
+  onProxyReq: (proxyReq, req, res) => {
+    if (req.headers.authorization) {
+      proxyReq.setHeader('Authorization', req.headers.authorization);
+    }
+    if (['POST', 'PUT', 'PATCH'].includes(req.method) && req.body) {
+      const bodyData = JSON.stringify(req.body);
+      proxyReq.setHeader('Content-Type', 'application/json');
+      proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData));
+      proxyReq.write(bodyData);
+    }
+  },
+  onError: (err, req, res) => {
+    logger.error(`Proxy error (Property Service): ${err.message}`);
+    if (!res.headersSent) {
+      res.status(500).json({ success: false, message: 'Lỗi kết nối dịch vụ bất động sản' });
+    }
+  }
+}));
+
+app.use('/api/loai-bds', createProxyMiddleware({
+  target: `http://localhost:${config.servicePorts.property}`,
+  changeOrigin: true,
+  pathRewrite: { '^/api/loai-bds': '/loai-bds' },
+  onProxyReq: (proxyReq, req, res) => {
+    if (req.headers.authorization) {
+      proxyReq.setHeader('Authorization', req.headers.authorization);
+    }
+    if (['POST', 'PUT', 'PATCH'].includes(req.method) && req.body) {
+      const bodyData = JSON.stringify(req.body);
+      proxyReq.setHeader('Content-Type', 'application/json');
+      proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData));
+      proxyReq.write(bodyData);
+    }
+  }
+}));
+
 // Order Service
 app.use('/api/order', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.order}`,
   changeOrigin: true,
-  pathRewrite: { '^/api/order': '/api' },
+  pathRewrite: { '^/api/order': '/order' },
   timeout: 30000,
   proxyTimeout: 30000,
   ws: false,
@@ -295,7 +344,7 @@ app.use('/api/order', createProxyMiddleware({
 app.use('/api/payment', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.order}`,
   changeOrigin: true,
-  pathRewrite: { '^/api/payment': '/api/payment' },
+  pathRewrite: { '^/api/payment': '/payment' },
   timeout: 60000,
   proxyTimeout: 60000,
   ws: false,
@@ -364,7 +413,7 @@ app.use('/api/payment', createProxyMiddleware({
 app.use('/api/dat-ban', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.order}`,
   changeOrigin: true,
-  pathRewrite: { '^/api/dat-ban': '/api/dat-ban' },
+  pathRewrite: { '^/api/dat-ban': '/dat-ban' },
   timeout: 30000,
   proxyTimeout: 30000,
   ws: false,
@@ -408,6 +457,7 @@ app.use('/api/dat-ban', createProxyMiddleware({
 app.use('/api/danh-gia', createProxyMiddleware({
   target: `http://localhost:${config.servicePorts.review}`,
   changeOrigin: true,
+  pathRewrite: { '^/api/danh-gia': '/danh-gia' },
   onProxyReq: (proxyReq, req, res) => {
     // Chuyển tiếp token xác thực
     if (req.headers.authorization) {
@@ -451,28 +501,28 @@ app.get('/api/admin/dashboard/stats', authenticateToken, async (req, res) => {
     };
 
     // Lấy tổng số người dùng
-    const usersResponse = await fetch(`http://localhost:${config.servicePorts.auth}/api/users/count`, {
+    const usersResponse = await fetch(`http://localhost:${config.servicePorts.auth}/users/count`, {
       headers
     });
     const usersData = await usersResponse.json();
     console.log('User data:', usersData);
 
     // Lấy tổng số đơn đặt bàn
-    const reservationsResponse = await fetch(`http://localhost:${config.servicePorts.order}/api/dat-ban/count`, {
+    const reservationsResponse = await fetch(`http://localhost:${config.servicePorts.order}/dat-ban/count`, {
       headers
     });
     const reservationsData = await reservationsResponse.json();
     console.log('Reservation data:', reservationsData);
 
     // Lấy tổng doanh thu
-    const revenueResponse = await fetch(`http://localhost:${config.servicePorts.order}/api/dat-ban/revenue`, {
+    const revenueResponse = await fetch(`http://localhost:${config.servicePorts.order}/dat-ban/revenue`, {
       headers
     });
     const revenueData = await revenueResponse.json();
     console.log('Revenue data:', revenueData);
 
     // Lấy tổng số nhà hàng
-    const restaurantsResponse = await fetch(`http://localhost:${config.servicePorts.restaurant}/api/nha-hang/count`, {
+    const restaurantsResponse = await fetch(`http://localhost:${config.servicePorts.restaurant}/nha-hang/count`, {
       headers
     });
     const restaurantsData = await restaurantsResponse.json();
@@ -519,7 +569,7 @@ app.get('/api/admin/dashboard/recent-orders', authenticateToken, async (req, res
     const token = authHeader && authHeader.split(' ')[1];
 
     // Lấy danh sách đơn đặt bàn gần đây
-    const response = await fetch(`http://localhost:${config.servicePorts.order}/api/dat-ban/recent?limit=4`, {
+    const response = await fetch(`http://localhost:${config.servicePorts.order}/dat-ban/recent?limit=4`, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
@@ -578,7 +628,7 @@ app.get('/api/admin/dashboard/recent-reservations', authenticateToken, async (re
     const token = authHeader && authHeader.split(' ')[1];
 
     // Lấy danh sách đặt bàn gần đây
-    const response = await fetch(`http://localhost:${config.servicePorts.order}/api/dat-ban/recent?limit=4&sort=ngayDat`, {
+    const response = await fetch(`http://localhost:${config.servicePorts.order}/dat-ban/recent?limit=4&sort=ngayDat`, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
@@ -643,7 +693,7 @@ app.get('/api/admin/dashboard/popular-items', authenticateToken, async (req, res
     const token = authHeader && authHeader.split(' ')[1];
 
     // Lấy danh sách món ăn phổ biến
-    const response = await fetch(`http://localhost:${config.servicePorts.menu}/api/mon-an/popular`, {
+    const response = await fetch(`http://localhost:${config.servicePorts.menu}/mon-an/popular`, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'
@@ -688,7 +738,7 @@ app.get('/api/admin/dashboard/popular-items', authenticateToken, async (req, res
 // Kiểm tra kết nối đến Auth Service
 app.get('/api/auth-check', async (req, res) => {
   try {
-    const response = await fetch(`http://localhost:${config.servicePorts.auth}/api/auth/health`);
+    const response = await fetch(`http://localhost:${config.servicePorts.auth}/auth/health`);
     const data = await response.json();
     res.status(200).json({
       success: true,
@@ -722,7 +772,7 @@ app.get('/api/check-admin', async (req, res) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET || config.jwt.secret);
     
     // Truy vấn thông tin người dùng từ Auth Service
-    const response = await fetch(`http://localhost:${config.servicePorts.auth}/api/auth/current`, {
+    const response = await fetch(`http://localhost:${config.servicePorts.auth}/auth/current`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }

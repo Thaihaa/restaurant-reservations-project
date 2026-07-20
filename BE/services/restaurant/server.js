@@ -5,8 +5,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const { notFound, errorHandler } = require('../../middlewares/errorHandler');
-const nhaHangRoutes = require('./routes/nhaHangRoutes');
-const banRoutes = require('./routes/banRoutes');
+const moiGioiRoutes = require('./routes/moiGioiRoutes');
+const chiNhanhRoutes = require('./routes/chiNhanhRoutes');
 const config = require('../../config');
 const logger = require('../../utils/logger');
 const path = require('path');
@@ -30,15 +30,15 @@ if (config.env === 'development') {
   app.use(morgan('dev'));
 }
 
-// Routes
-app.use('/api/nha-hang', nhaHangRoutes);
-app.use('/api/ban', banRoutes);
+// Routes - Real Estate Agent Management
+app.use('/moi-gioi', moiGioiRoutes);
+app.use('/chi-nhanh', chiNhanhRoutes);
 
 // Kiểm tra kết nối
-app.get('/api/restaurant/health', (req, res) => {
+app.get('/restaurant/health', (req, res) => {
   res.status(200).json({
     success: true,
-    service: 'Restaurant Service',
+    service: 'Real Estate Agent Service (Formerly Restaurant Service)',
     time: new Date().toISOString()
   });
 });

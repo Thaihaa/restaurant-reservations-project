@@ -1,15 +1,11 @@
 const mongoose = require('mongoose');
 
-const nhaHangSchema = new mongoose.Schema(
+const moiGioiSchema = new mongoose.Schema(
   {
-    tenNhaHang: {
+    tenMoiGioi: {
       type: String,
-      required: [true, 'Tên nhà hàng là bắt buộc'],
+      required: [true, 'Tên môi giới là bắt buộc'],
       trim: true
-    },
-    diaChi: {
-      type: String,
-      required: [true, 'Địa chỉ nhà hàng là bắt buộc']
     },
     dienThoai: {
       type: String,
@@ -26,13 +22,11 @@ const nhaHangSchema = new mongoose.Schema(
       type: String,
       trim: true
     },
-    gioMoCua: {
+    licenseNumber: {
       type: String,
-      required: [true, 'Giờ mở cửa là bắt buộc']
-    },
-    gioDongCua: {
-      type: String,
-      required: [true, 'Giờ đóng cửa là bắt buộc']
+      required: [true, 'Số giấy phép kinh doanh là bắt buộc'],
+      trim: true,
+      unique: true
     },
     moTa: {
       type: String
@@ -51,10 +45,14 @@ const nhaHangSchema = new mongoose.Schema(
       type: Number,
       default: 0
     },
+    soLuongBatDongSan: {
+      type: Number,
+      default: 0
+    },
     trangThai: {
       type: String,
-      enum: ['Đang hoạt động', 'Tạm ngưng', 'Đóng cửa'],
-      default: 'Đang hoạt động'
+      enum: ['Hoạt động', 'Tạm dừng', 'Hết hạn'],
+      default: 'Hoạt động'
     },
     viTri: {
       type: {
@@ -66,6 +64,16 @@ const nhaHangSchema = new mongoose.Schema(
         type: [Number],
         default: [0, 0] // [longitude, latitude]
       }
+    },
+    diaChi: {
+      type: String,
+      required: [true, 'Địa chỉ là bắt buộc']
+    },
+    thanhPho: {
+      type: String
+    },
+    quanHuyen: {
+      type: String
     }
   },
   {
@@ -74,8 +82,10 @@ const nhaHangSchema = new mongoose.Schema(
 );
 
 // Tạo index cho vị trí để tìm kiếm theo khoảng cách
-nhaHangSchema.index({ viTri: '2dsphere' });
+moiGioiSchema.index({ viTri: '2dsphere' });
+moiGioiSchema.index({ licenseNumber: 1 });
+moiGioiSchema.index({ tenMoiGioi: 1 });
 
-const NhaHang = mongoose.model('NhaHang', nhaHangSchema);
+const MoiGioi = mongoose.model('MoiGioi', moiGioiSchema);
 
-module.exports = NhaHang; 
+module.exports = MoiGioi; 

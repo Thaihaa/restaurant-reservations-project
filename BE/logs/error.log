@@ -5036,3 +5036,183 @@ Error: Không tìm thấy - /payment
     at D:\DoAnNodeJs\BE\services\order\server.js:203:3
     at Layer.handle [as handle_request] (D:\DoAnNodeJs\BE\node_modules\express\lib\router\layer.js:95:5)
     at next (D:\DoAnNodeJs\BE\node_modules\express\lib\router\route.js:149:13)
+2026-04-01 18:58:24:5824 error: Không tìm thấy - /payment
+Error: Không tìm thấy - /payment
+    at notFound (F:\Project_NodeJs\restaurant-reservations-project\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\Project_NodeJs\restaurant-reservations-project\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\Project_NodeJs\restaurant-reservations-project\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 03:22:38:2238 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 03:22:38:2238 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 03:22:53:2253 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 03:22:53:2253 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 03:22:53:2253 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 03:22:53:2253 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 04:51:25:5125 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 04:51:25:5125 error: Không tìm thấy - /nha-hang/count
+Error: Không tìm thấy - /nha-hang/count
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at logger (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+2026-07-19 04:51:34:5134 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:51:34:5134 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:51:35:5135 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:51:35:5135 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:52:09:529 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)
+2026-07-19 04:52:09:529 error: Không tìm thấy - /order/dat-ban
+Error: Không tìm thấy - /order/dat-ban
+    at notFound (F:\WebsiteBatDongSan\real_estate_website\BE\middlewares\errorHandler.js:21:17)
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:328:13)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:286:9
+    at router.process_params (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:346:12)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\index.js:280:10)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:141:14)
+    at F:\WebsiteBatDongSan\real_estate_website\BE\services\order\server.js:203:3
+    at Layer.handle [as handle_request] (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (F:\WebsiteBatDongSan\real_estate_website\BE\node_modules\express\lib\router\route.js:149:13)

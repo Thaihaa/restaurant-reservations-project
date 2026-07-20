@@ -174,11 +174,30 @@ app.use((req, res, next) => {
 });
 
 // Routes - sửa route để phù hợp với yêu cầu từ Gateway
-app.use('/api/dat-ban', thongTinDatBanRoutes);
-app.use('/api/payment', paymentRoutes);
+app.use('/dat-ban', thongTinDatBanRoutes);
+app.use('/payment', paymentRoutes);
+
+// Internal endpoint cho các microservice khác gửi socket event
+app.post('/internal/socket/emit', (req, res) => {
+  const { room, event, data } = req.body;
+
+  if (!room || !event) {
+    return res.status(400).json({ success: false, message: 'Thiếu room hoặc event' });
+  }
+
+  const io = req.app.get('io');
+  if (!io) {
+    return res.status(500).json({ success: false, message: 'Socket.IO chưa được khởi tạo' });
+  }
+
+  io.to(room).emit(event, data);
+  logger.info(`Internal socket emit: event="${event}" room="${room}"`);
+
+  res.status(200).json({ success: true, message: 'Đã gửi socket event' });
+});
 
 // Kiểm tra kết nối
-app.get('/api/order/health', (req, res) => {
+app.get('/order/health', (req, res) => {
   res.status(200).json({
     success: true,
     service: 'Order Service',
